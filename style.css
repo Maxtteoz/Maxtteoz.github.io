@@ -1,0 +1,16 @@
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a5b1c2;
+}
+
+.container {
+    height: 270px;
+}
