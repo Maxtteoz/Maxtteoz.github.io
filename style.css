@@ -3,11 +3,7 @@
     padding: 0;
 }
 body {
-    font-family: sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+c
     background-color: #a5b1c2;
 }
 
@@ -68,3 +64,59 @@ li:hover {
 .item-txt{
     padding-left: .5rem;
 }
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    }
+    
+    .glow-button {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #00ff88;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: transparent;
+        border: 2px solid #00ff88;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 255, 136, 0.5), 0 0 20px rgba(0, 255, 136, 0.3), 0 0 30px rgba(0, 255, 136, 0.2);
+        transition: all 0.4s ease;
+        position: center;
+        overflow: hidden;
+    }
+    
+    .glow-button::before {
+        content: '';
+        position: center;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(circle, rgba(0, 255, 136, 0.4), transparent);
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.6s ease;
+        z-index: 0;
+    }
+    
+    .glow-button:hover {
+        color: #1a1a1a;
+        background-color: #00ff88;
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 255, 136, 0.6), 0 0 60px rgba(0, 255, 136, 0.4);
+    }
+    
+    .glow-button:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .glow-button span {
+        position: center;
+        z-index: 1;
+    }
